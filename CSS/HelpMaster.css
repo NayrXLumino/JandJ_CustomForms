@@ -1,0 +1,63 @@
+﻿body{
+    background-color:#CCEEEE;
+}
+
+#Header
+{
+    width:900px; height:70px;  
+    background-image: url(../Images/logo.png);
+    }
+    
+#Navigation
+{
+    width:250px; height:550px; 
+    overflow:scroll; 
+    background-color:White;
+    }
+    
+.title
+{
+    width:630px; height:20px;
+    vertical-align:middle;
+    font-family:Verdana; font-size:11px;
+    font-weight:bold; border-bottom:solid 1px;
+    position:fixed; background-color:White;
+}
+
+.number
+{
+    font-size:11px; 
+    font-family:Verdana;
+    width:5px; 
+    }
+    
+td{
+    font-size:11px; 
+    font-family:Verdana; 
+    }
+    
+a{
+    font-size:11px;
+    font-family:Verdana;
+    text-decoration:none;
+    }
+    
+p{
+    font-size:11px; 
+    font-family:Verdana;    
+}
+
+.topMenus
+{
+    width:250px; height:20px; 
+    font-size:11px
+    }
+     
+.note
+{
+    background-color:#FFF8C6;
+    border:solid 1px;
+    border-color:Red;
+    font-size:11px;
+    font-family:Verdana;
+    }  

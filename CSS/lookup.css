@@ -1,0 +1,15 @@
+﻿body 
+{
+	font-family:Calibri;
+	font-size:12px;
+}
+
+input
+{
+    text-transform: uppercase;
+}
+
+textarea
+{
+    text-transform: uppercase;
+}

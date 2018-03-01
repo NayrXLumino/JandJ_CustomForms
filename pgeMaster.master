@@ -1,0 +1,450 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="pgeMaster.master.cs" Inherits="pgeMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Workflow</title>
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="Javascript" />
+    <link rel="Shortcut Icon" href="Images/nxperticon.ico" />
+    <link href="CSS/pgeMaster.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/afterLog.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/collapseCSS.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        popupWin = null;
+        popupWin2 = null;
+        refresh = false;
+        isPostBack = false;
+        var epochCalendar;
+        function scram() 
+        {
+            try {
+                if (popupWin2 != null && popupWin2.open) 
+                {
+                    try 
+                    {
+                        popupWin2.close();
+                    }
+                    catch (err) 
+                    {
+                        //Do nothing
+                    }
+                }
+            }
+            catch (err) {
+
+            }
+
+	        try
+	        {
+              if (popupWin != null && popupWin.open) 
+              {
+                try
+                {
+                    popupWin.close();
+                }
+                catch(err)
+                {
+                    //Do nothing
+                }
+                if(refresh == true)
+                {
+                    refresh = false;
+                    window.location.reload();
+                } 
+              }
+            }
+            catch(err)
+            {
+
+            }
+        }
+        
+        //Common javascript functions used//
+        function lookupEmployee(transactionType)
+        {
+            
+            try
+            {
+                isPostBack = false;
+            }
+            catch(err)
+            {
+            
+            }
+            var left=(screen.width/2)-(735/2);
+            var top=(screen.height/2)-(400/2);
+            var url = "../../lookupEmployee.aspx?type=" + transactionType;
+
+            popupWin = window.open(url, "Sample", "scrollbars=no,resizable=no,width=735,height=400,top=" + top + ",left=" + left);
+            return false;
+        }
+        function GetValueFrom_lookupEmployee(empId, empName, empNickname)
+        {
+            if(empId != '')
+            {
+                document.getElementById('ctl00_ContentPlaceHolder1_txtEmployeeId').value = empId.replace(/amp;/g,'').replace(/&nbsp;/g,'');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtEmployeeName').value = empName.replace(/amp;/g,'').replace(/&nbsp;/g,'');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtNickname').value = empNickname.replace(/amp;/g,'').replace(/&nbsp;/g,'');
+                __doPostBack();
+            }
+            return false;
+        }
+        
+        function lookupGenericFiller(control, lookup){
+            var left=(screen.width/2)-(750/2);
+		    var top=(screen.height/2)-(300/2);
+			popupWin = window.open("../../lookupGenericFiller.aspx?ctrl="+ control + "&lookup=" + lookup ,"Sample","scrollbars=no,resizable=no,width=750,height=300,top=" +top+ ",left=" +left);
+			return false;
+		}
+		function GetValueFrom_lookupGenericFiller(val1,val2) {
+		    document.getElementById('ctl00_ContentPlaceHolder1_'+val1).value = val2;
+		}
+		
+		function lookupGenericFillerMultiple(control, lookup){
+            var left=(screen.width/2)-(750/2);
+		    var top=(screen.height/2)-(410/2);
+			popupWin = window.open("../../lookupGenericFillerMultiple.aspx?ctrl="+ control + "&lookup=" + lookup ,"Sample","scrollbars=no,resizable=no,width=750,height=410,top=" +top+ ",left=" +left);
+			return false;
+		}
+		function GetValueFrom_lookupGenericFillerMultiple(val1,val2) {
+		    document.getElementById('ctl00_ContentPlaceHolder1_'+val1).value = val2;
+		}
+		
+		function lookupAccountCodeDesc(control, lookup){
+            var left=(screen.width/2)-(750/2);
+		    var top=(screen.height/2)-(300/2);
+			popupWin = window.open("../../lookupAccountCodeDesc.aspx?ctrl="+ control + "&lookup=" + lookup ,"Sample","scrollbars=no,resizable=no,width=750,height=300,top=" +top+ ",left=" +left);
+			return false;
+		}
+		function GetValueFrom_lookupAccountCodeDesc(val1,val2,val3) {
+		    document.getElementById('ctl00_ContentPlaceHolder1_'+val1+'Code').value = val2;
+		    document.getElementById('ctl00_ContentPlaceHolder1_'+val1+'Desc').value = val3;
+		}
+
+		function isMaxLength(control, len) {
+		    var ctrl = document.getElementById('ctl00_ContentPlaceHolder1_'+control);
+		    if (ctrl)
+		        return (ctrl.value.length <= len)
+		    else
+		        return false;
+		}
+        
+		function isMaxLengthAfterKeyPress(control, len) {
+		    var ctrl = document.getElementById('ctl00_ContentPlaceHolder1_' + control);
+		    if (ctrl) {
+		        try {
+		            if (ctrl.value.length > len) {
+		                document.getElementById('ctl00_ContentPlaceHolder1_' + control).value = ctrl.value.substring(0, len);
+		            }
+		        }
+		        catch (e) {
+		            document.getElementById('ctl00_ContentPlaceHolder1_' + control).value = '';
+		        }
+		    }
+		}
+
+		function disableEnter() {
+		    if (window.event.keyCode == 13) {
+		        event.returnValue = false;
+		        event.cancel = true;
+		    }
+		}
+
+		function trim(str, chars) {
+		    return ltrim(rtrim(str, chars), chars);
+		}
+
+		function ltrim(str, chars) {
+		    chars = chars || "\\s";
+		    return str.replace(new RegExp("^[" + chars + "]+", "g"), "");
+		}
+
+		function rtrim(str, chars) {
+		    chars = chars || "\\s";
+		    return str.replace(new RegExp("[" + chars + "]+$", "g"), "");
+		}
+
+		//End//
+		window.onfocus = scram;
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">      
+    <asp:HiddenField ID="hfServerTime" runat="server" />
+    <div class="pageContent">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div>
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <div class="logo">
+                                        <script type="text/javascript">
+
+                                        // Current Server Time script (SSI or PHP)- By JavaScriptKit.com (http://www.javascriptkit.com)
+                                        // For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+                                        // This notice must stay intact for use.
+
+                                        //Depending on whether your page supports SSI (.shtml) or PHP (.php), UNCOMMENT the line below your page supports and COMMENT the one it does not:
+                                        //Default is that SSI method is uncommented, and PHP is commented:
+
+                                        //var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
+                                        //var currenttime = '<? print date("F d, Y H:i:s", time())?>' //PHP method of getting server date
+                                        var currenttime = document.getElementById('ctl00_hfServerTime').value;
+                                        ///////////Stop editting here/////////////////////////////////
+
+                                        var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+                                        var serverdate=new Date(currenttime)
+
+                                        function padlength(what){
+                                        var output=(what.toString().length==1)? "0"+what : what
+                                        return output
+                                        }
+
+                                        function displaytime(){
+                                        serverdate.setSeconds(serverdate.getSeconds()+1)
+                                        var datestring=montharray[serverdate.getMonth()]+" "+padlength(serverdate.getDate())+", "+serverdate.getFullYear()
+                                        var timestring=padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+":"+padlength(serverdate.getSeconds())
+                                        document.getElementById("servertime").innerHTML=datestring+" "+timestring
+                                        }
+
+                                        window.onload=function(){
+                                        setInterval("displaytime()", 1000)
+                                        }
+
+                                        </script>
+                                        <p><span id="servertime"></span></p>
+                                        <div style="height:40px;width:100px;float:left">
+                                        </div>
+                                        <div id="login">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td align="right">
+                                                        <asp:Label ID="lblUserLogged" runat="server" Text="[USERNAME]" Font-Size="12px" ForeColor="White" style="left: 23px; position: static; top: 0px" ></asp:Label>
+                                                    </td>
+                                                    <td style="width:10px;">
+                                                        |
+                                                    </td>
+                                                    <td style="width:50px;">
+                                                        <asp:HyperLink ID="hlLogout" runat="server" ForeColor="White" NavigateUrl="~/index.aspx" Target="_self" Font-Underline="False" Font-Size="12px" style="position: static;">Logout&nbsp;&nbsp;</asp:HyperLink>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color:<%= Resources.Resource.MENUBGCOLOR %>; border-top:1px solid #0400FF; border-bottom:1px solid #111111">
+                                     <asp:Menu ID="menuMain" runat="server" Font-Names="Calibri" Font-Size="14px" ForeColor="White" Orientation="Horizontal" staticSubMenuIndent="">
+                                        <DynamicHoverStyle BackColor="LightSteelBlue" ForeColor="White" />
+                                        <DynamicMenuStyle BackColor="Transparent" BorderStyle="None" Width="190px" />
+                                        <DynamicItemTemplate>
+                                            <%# Eval("Text") %>
+                                        </DynamicItemTemplate>
+                                        <DynamicSelectedStyle BackColor="SteelBlue" BorderColor="White" BorderStyle="Solid" />
+                                        <DynamicMenuItemStyle HorizontalPadding="4px" Width="190px" Font-Names="Calibri" Font-Size="14px" ForeColor="Black" Height="20px" />
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="~/dashBoard.aspx" Text="HOME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;" Value="Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="TRANSACTIONS" NavigateUrl="~/Transactions/Default.aspx" Value="Transactions">
+                                                <asp:MenuItem Text="Overtime" Value="Overtime" NavigateUrl="~/Transactions/Overtime/Default.aspx">
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeIndividual.aspx" Text="Overtime Entry" Value="WFOTENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeRange.aspx" Text="Special Overtime Entry"
+                                                        Value="WFSPLOTENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeBatchRange.aspx" Text="Batch Overtime Entry"
+                                                        Value="WFBOTENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeBatchUploading.aspx" Text="Batch Overtime Uploading" Value="WFBOTUPLD">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeReport.aspx" Text="Overtime Report" Value="WFOTREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeCarpassReport.aspx" Text="Car Pass Report" Value="WFCRPASREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeRequestReport.aspx" 
+                                                        Text="Overtime Request Form" Value="WFOTREQREP"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Overtime/pgeOvertimeCancellation.aspx" 
+                                                        Text="Overtime Cancellation" Value="WFOTCANCEL"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Leave" Value="Leave" NavigateUrl="~/Transactions/Leave/Default.aspx">
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveIndividual.aspx" Text="Leave Entry" Value="WFLVEENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveNotification.aspx" Text="Leave Notice Entry" Value="WFLVENOTEENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveRange.aspx" Text="Special Leave Entry" Value="WFSPLLVEENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveBatch.aspx" Text="Batch Leave Entry" Value="WFBLVENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveBatchUploading.aspx" Text="Batch Leave Uploading" Value="WFBLEAVEUPLD"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveCancellation.aspx" Text="Leave Cancellation"
+                                                        Value="WFLVECANCEL"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveReport.aspx" Text="Leave Report" Value="WFLVEREP"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Leave/pgeLeaveCreditsReport.aspx" Text="Leave Credits Report" Value="WFLVECREDREP">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Time Record" Value="Time Record Modification" NavigateUrl="~/Transactions/TimeModification/Default.aspx">
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/TimeModification/pgeTimeModification.aspx" Text="Time Modification Entry"
+                                                        Value="WFTIMERECENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/TimeModification/pgeTimeModificationReport.aspx" Text="Time Modification Report" Value="WFTIMERECREP"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/TimeModification/pgeTimeRecordReport.aspx" Text="Time Record Entry Report" Value="WFWORKREC">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/TimeModification/pgeStraightWorkIndividual.aspx" 
+                                                        Text="Individual Straight Work" Value="WFSTRAIGHTWORK"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/TimeModification/pgeStraightWorkReport.aspx" 
+                                                        Text="Straight Work Report" Value="WFSTRGHTWORKREP" />
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Man Hour Allocation" Value="Job Split" NavigateUrl="~/Transactions/ManhourAllocation/Default.aspx">
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeWorkRecord.aspx" Text="Allocation Entry" Value="WFJOBSPLTENTRY"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeJobSplitMod.aspx" Text="Allocation Modification" Value="WFJOBSPLTMOD">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeRJobSplit.aspx" Text="Allocation Entry Report" Value="WFJOBSPLTREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeRManHours.aspx" Text="Man Hour Report" Value="WFMANHOURREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeRJobSplitEnroute.aspx" Text="Routed Transactions Report"
+                                                        Value="WFJSENROUTE"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeRManHoursDetails.aspx" Text="Man Hour Details Report" Value="WFMANHOURDTL">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeCostPerProject.aspx" Text="Cost Per Project Report" Value="WFMANHOURREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeCostPerSection.aspx" Text="Cost Per Section Report" Value="WFMANHOURREP">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/ManhourAllocation/pgeNoManHour.aspx" Text="No Manhour Report" Value="WFMANHOURREP">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Transactions/WorkInformation/Default.aspx" 
+                                                    Text="Work Information" Value="Work Information">
+                                                    <asp:MenuItem Text="Group Update" Value="WFCHANGEGROUP" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeWorkGroupIndividualUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Batch Group Update" Value="WFBCHANGEGROUP" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeWorkGroupBatchUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Shift Update" Value="WFSHIFTUPDATE" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeShiftIndividualUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Batch Shift Update" Value="WFBSHIFTUPDATE" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeShiftBatchUpdateRange.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Costcenter Update" Value="WFCCUPDATE" 
+                                                        
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeCostCenterIndividualUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Batch Costcenter Update" Value="WFBCCUPDATE" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeCostCenterBatchUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Restday Update" Value="WFRESTDAY" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeRestdayIndividualUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Batch Restday Update" Value="WFBRESTDAY" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeRestdayBatchUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Work Information Report" Value="WFMVEREP" 
+                                                        NavigateUrl="~/Transactions/WorkInformation/pgeWorkInformationReport.aspx"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Transactions/Personnel/Default.aspx" Text="Personnel"
+                                                    Value="Personnel">
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Personnel/pgeTaxCodeCivilStatus.aspx" Text="Tax Code/Civil Status Update"
+                                                        Value="WFTAXCODE"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Personnel/pgeTaxCodeCivilStatusReport.aspx"
+                                                        Text="Tax Code/Civil Status Report" Value="WFTAXCIVILREP"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Beneficiary Update" Value="WFBENEUPDATE" 
+                                                        NavigateUrl="~/Transactions/Personnel/pgeBeneficiaryUpdate.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Beneficiary Report" Value="WFBENEREPORT" 
+                                                        NavigateUrl="~/Transactions/Personnel/pgeBeneficiaryUpdateReport.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Personnel/pgeAddressPresent.aspx" 
+                                                        Text="Present Address" Value="WFADDPRES"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Personnel/pgeAddressPermanent.aspx" 
+                                                        Text="Permanent Address" Value="WFADDPERMA"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Transactions/Personnel/pgeAddressEmergency.aspx" 
+                                                        Text="Emergency Contact" Value="WFADDEMER"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Address/Contact Report" Value="WFADDREPORT" 
+                                                        NavigateUrl="~/Transactions/Personnel/pgeAddressReport.aspx"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="#" Text="Payroll" Value="Payroll">
+                                                    <asp:MenuItem Text="Payslip Viewing" Value="WFPSVIEWING" NavigateUrl="~/Transactions/Payroll/pgePaySlipViewer.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Ledger Viewing" Value="WFLEDGERPREV" NavigateUrl="~/Transactions/Payroll/pgeLedgerViewing.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Adjustment Viewing" Value="WFLBRADJREP" NavigateUrl="~/Transactions/Payroll/pgeLaborHrAdjReport.aspx"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Forms" Value="Custom Forms" NavigateUrl="~/Transactions/CustomForms/Default.aspx">
+                                                    <asp:MenuItem Text="Application Form" Value="WFAPPFORM" NavigateUrl="~/Transactions/CustomForms/ApplicationForm.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Application Report" Value="WFAPPFORMREP" NavigateUrl="~/Transactions/CustomForms/ApplicationReport.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Gate Pass" Value="WFGATEPASS" NavigateUrl="~/Transactions/CustomForms/GatePass.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Gate Pass Report" Value="WFGATEPASSREP" NavigateUrl="~/Transactions/CustomForms/GatePassReport.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Shifting Break" Value="WFSHIFTBREAK" NavigateUrl="~/Transactions/CustomForms/ShiftingBreak.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Shifting Break Report" Value="WFSHIFTBREAKREP" NavigateUrl="~/Transactions/CustomForms/ShiftingBreakReport.aspx"></asp:MenuItem>
+                                                </asp:MenuItem>
+
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="MAINTENANCE" Value="Maintenance" NavigateUrl="~/Maintenance/Default.aspx">
+                                                <asp:MenuItem Text="Approval Route" Value="Approval Route" NavigateUrl="~/Maintenance/ApprovalRoute/Default.aspx">
+                                                    <asp:MenuItem NavigateUrl="~/Maintenance/ApprovalRoute/pgeApprovalRouteMaster.aspx" Text="Approval Route Master" Value="WFRTEMASTER">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Maintenance/ApprovalRoute/pgeNewEmployeeApprovalRoute.aspx" Text="Employee Approval Route" Value="WFROUTEENTRY">
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Maintenance/ApprovalRoute/pgeApprovalRouteMasterReport.aspx" Text="Route Master Report" Value="WFROUTEREP"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Maintenance/ApprovalRoute/pgeEmployeeApprovalRouteReport.aspx" Text="Employee Route Report" Value="WFEMPROUTE"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Maintenance/ApprovalRoute/pgeApproverOverrideMaster.aspx" Text="Approver Override Master" Value="WFAPPOVRDE"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="TOOLS" Value="Tools" Selectable="False" NavigateUrl="#">
+                                                <asp:MenuItem Text="Change Password" Value="WFCHANGEPASS" NavigateUrl="~/Tools/Password/pgeChangePassword.aspx"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Tools/Announcement/pgeAnnouncementMaster.aspx" Text="Announcements" Value="WFANNOUNCE"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Tools/Utilities/pgePendingTransaction.aspx" 
+                                                    Text="Endorse Utility" Value="WFPTRANSACTION"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                        </Items>
+                                        <StaticHoverStyle BackColor="DodgerBlue" ForeColor="White" />
+                                        <StaticMenuStyle BackColor="Transparent" />
+                                        <StaticItemTemplate>
+                                            <%# Eval("Text") %>
+                                        </StaticItemTemplate>
+                                         <LevelSubMenuStyles>
+                                             <asp:SubMenuStyle BackColor="Transparent" Font-Underline="False" />
+                                             <asp:SubMenuStyle BackColor="DodgerBlue" CssClass="menu2" Font-Underline="False" />
+                                             <asp:SubMenuStyle BackColor="LightSteelBlue" CssClass="menu3" Font-Underline="False" />
+                                         </LevelSubMenuStyles>
+                                        <StaticMenuItemStyle BackColor="Transparent" Font-Names="Calibri" Font-Size="14px" Height="30px" Width="150px" HorizontalPadding="5px" />
+                                    </asp:Menu>                                               
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom:solid 1px #AABBCC; padding-top: 2px; padding-bottom: 4px;">
+                                    <asp:SiteMapPath ID="SiteMapPathMain" runat="server" Font-Size="0.8em" Font-Names="Verdana" PathSeparator=" : ">
+                                        <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                                        <CurrentNodeStyle ForeColor="#333333" />
+                                        <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                                        <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                                    </asp:SiteMapPath>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <table cellpadding="0" cellspacing="0" style="text-align:right;" width="100%">
+                        <tr>
+                            <td align="left" style=" width:300px;">
+                                <asp:Label ID="lblLastLogin" runat="server" Font-Size="XX-Small" ForeColor="InactiveCaptionText"></asp:Label>
+                            </td>
+                            <td align="left" style=" width:300px;">
+                                <asp:HyperLink ID="hlTMS" runat="server" Target="_self">Login to TMS</asp:HyperLink>
+                            </td>
+                            
+                            <td align="right">
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/pgeAnnouncementsEx.aspx" Target="_self">Announcements</asp:HyperLink>
+                            </td>
+                            <td align="right" style="width:50px">
+                                <asp:HyperLink ID="hplHelp" runat="server" NavigateUrl="~/Help/hlpDefault.aspx" Target="_blank">Help</asp:HyperLink>
+                            </td>
+                            <td align="right" style="width:200px">
+                                <asp:Label ID="lblCopyright" runat="server" Text="Copyright" Font-Size="XX-Small" ForeColor="InactiveCaptionText"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr><td align="left" style=" width:300px;">
+                                <%--<asp:HyperLink ID="hlTraining" runat="server" Target="_self" ForeColor="Red">Login to Training</asp:HyperLink>--%>
+                            </td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/DashBoard.aspx" title="Home"  description="">
+		<siteMapNode url="~/Transactions/Default.aspx" title="Transactions"  description="Transactions">
+			<siteMapNode url="~/Transactions/Overtime/Default.aspx" title="Overtime"  description="Overtime">
+				<siteMapNode url="~/Transactions/Overtime/pgeOvertimeIndividual.aspx" title="Individual Overtime Entry"  description="Individual Overtime Entry" />
+				<siteMapNode url="~/Transactions/Overtime/pgeOvertimeBatch.aspx" title="Batch Overtime Entry"  description="Batch Overtime Entry" />
+				<siteMapNode url="~/Transactions/Overtime/pgeOvertimeRange.aspx" title="Special Overtime Entry"  description="Special Overtime Entry" />
+				<siteMapNode url="~/Transactions/Overtime/pgeOvertimeReport.aspx" title="Overtime Report"  description="Overtime Report" />
+				<siteMapNode url="~/Transactions/Overtime/pgeOvertimeBatchRange.aspx" title="Batch Overtime Entry"  description="Batch Overtime Entry" />
+        <siteMapNode url="~/Transactions/Overtime/pgeOvertimeRequestReport.aspx" title="Overtime Request Report"  description="Overtime Request Report" />
+        <siteMapNode url="~/Transactions/Overtime/pgeOvertimeBatchUploading.aspx" title="Batch Overtime Uploading"  description="Batch Overtime Uploading" />
+      </siteMapNode>
+			<siteMapNode url="~/Transactions/Leave/Default.aspx" title="Leave"  description="Leave">
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveIndividual.aspx" title="Individual Leave Entry"  description="Individual Leave Entry" />
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveBatch.aspx" title="Leave Batch"  description="Batch Leave Entry" />
+        <siteMapNode url="~/Transactions/Leave/pgeLeaveBatchUploading.aspx" title="Batch Leave Uploading"  description="Batch Leave Entry" />
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveNotification.aspx" title="Leave Notice Entry"  description="Leave Notice Entry" />
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveRange.aspx" title="Special Leave Entry"  description="Special Leave Entry" />
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveCancellation.aspx" title="Leave Cancellation"  description="Leave Cancellation" />
+				<siteMapNode url="~/Transactions/Leave/pgeLeaveReport.aspx" title="Leave Report"  description="Leave Report" />
+			</siteMapNode>
+			<siteMapNode url="~/Transactions/TimeModification/Default.aspx" title="Time Record"  description="Time Record">
+				<siteMapNode url="~/Transactions/TimeModification/pgeTimeModification.aspx" title="Time Modification Entry"  description="Time Modification Entry" />
+				<siteMapNode url="~/Transactions/TimeModification/pgeTimeModificationReport.aspx" title="Time Modification Report"  description="Time Modification Report" />
+				<siteMapNode url="~/Transactions/TimeModification/pgeTimeRecordReport.aspx" title="Time Record Report"  description="Time Record Report" />
+			</siteMapNode>
+			<siteMapNode url="~/Transactions/Flextime/Default.aspx" title="Leave"  description="Leave">
+				<siteMapNode url="~/Transactions/Flextime/pgeTimeModification.aspx" title="Time Modification Entry"  description="Time Modification Entry" />
+				<siteMapNode url="~/Transactions/Flextime/pgeTimeModificationReport.aspx" title="Time Modification Report"  description="Time Modification Report" />
+				<siteMapNode url="~/Transactions/Flextime/pgeTimeRecordReport.aspx" title="Time Record Report"  description="Time Record Report" />
+			</siteMapNode>
+			<siteMapNode url="~/Transactions/WorkInformation/Default.aspx" title="Work Information"  description="Work Information">
+				<siteMapNode url="~/Transactions/WorkInformation/pgeWorkGroupIndividualUpdate.aspx" title="Individual Group Update"  description="Individual Group Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeWorkGroupBatchUpdate.aspx" title="Batch Group Update"  description="Batch Group Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeShiftIndividualUpdate.aspx" title="Individual Shift Update"  description="Individual Shift Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeShiftBatchUpdate.aspx" title="Batch Shift Update"  description="Batch Shift Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeShiftBatchUpdateRange.aspx" title="Batch Shift Update"  description="Batch Shift Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeRestdayIndividualUpdate.aspx" title="Individual Restday Update"  description="Individual Restday Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeRestdayBatchUpdate.aspx" title="Batch Restday Update"  description="Batch Restday Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeCostcenterIndividualUpdate.aspx" title="Individual Costcenter Update"  description="Individual Costcenter Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeCostcenterBatchUpdate.aspx" title="Batch Costcenter Update"  description="Batch Costcenter Update" />
+				<siteMapNode url="~/Transactions/WorkInformation/pgeWorkInformationReport.aspx" title="Work Information Report"  description="Work Information Report" />
+			</siteMapNode>
+			<siteMapNode url="~/Transactions/Personnel/Default.aspx" title="Personnel"  description="Personnel">
+				<siteMapNode url="~/Transactions/Personnel/pgeTaxCodeCivilStatus.aspx" title="Tax Code / Civil Status Update"  description="Tax Code / Civil Status Update" />
+				<siteMapNode url="~/Transactions/Personnel/pgeTaxCodeCivilStatusReport.aspx" title="Tax Code / Civil Status Report"  description="Tax Code / Civil Status Report" />
+				<siteMapNode url="~/Transactions/Personnel/pgeBeneficiaryUpdate.aspx" title="Beneficiary Update"  description="Beneficiary Update" />
+				<siteMapNode url="~/Transactions/Personnel/pgeBeneficiaryUpdateReprot.aspx" title="Beneficiary Update Report" description="Beneficiary Update Report" />
+				<siteMapNode url="~/Transactions/Personnel/pgeAddressPresent.aspx" title="Present Address"  description="Present Address" />
+				<siteMapNode url="~/Transactions/Personnel/pgeAddressPermanent.aspx" title="Permanent Address"  description="Permanent Address" />
+				<siteMapNode url="~/Transactions/Personnel/pgeAddressEmergency.aspx" title="Emergency Contact"  description="Emergency Contact" />
+				<siteMapNode url="~/Transactions/Personnel/pgeAddressReport.aspx" title="Address Report" description="Address Report" />
+			</siteMapNode>
+	    <siteMapNode url="~/Transactions/ManhourAllocation/Default.aspx" title="Man Hour Allocation"  description="Man Hour Allocation">
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeWorkRecord.aspx" title="Allocation Entry"  description="Allocation Entry" />
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeJobSplitMod.aspx" title="Allocation Modification"  description="Allocation Modification" />
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeRJobSplit.aspx" title="Allocation Entry Report"  description="Allocation Entry Report" />
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeRManHours.aspx" title="Man Hour Report" description="Man Hour Report" />
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeRJobSplitEnroute.aspx" title="Routed Transactions Report"  description="Routed Transactions Report" />
+		    <siteMapNode url="~/Transactions/ManhourAllocation/pgeRManHoursDetails.aspx.aspx" title="Man Hour Details Report"  description="Man Hour Details Report" />
+	    </siteMapNode>
+			<siteMapNode url="~/Transactions/Payroll/Default.aspx" title="Payroll Inquiry"  description="Payroll Inquiry">
+				<siteMapNode url="~/Transactions/Payroll/pgePaySlipViewer.aspx" title="Payroll Viewing"  description="Payslip Viewing" />
+				<siteMapNode url="~/Transactions/Payroll/pgeLaborHrAdjReport.aspx" title="Payroll Adjustment Report"  description="Payroll Adjustment Report" />
+        <siteMapNode url="~/Transactions/Payroll/pgeLedgerViewing.aspx" title="Ledger Viewing"  description="Ledger Viewing" />
+			</siteMapNode>
+      <siteMapNode url="~/Transactions/CustomForms/Default.aspx" title="Custom Forms"  description="Custom Forms">
+        <siteMapNode url="~/Transactions/CustomForms/ApplicationForm.aspx" title="Application Form"  description="Application Form" />
+        <siteMapNode url="~/Transactions/CustomForms/ApplicationReport.aspx" title="Application Report"  description="Application Report" />
+        <siteMapNode url="~/Transactions/CustomForms/GatePass.aspx" title="Gate Pass"  description="Gate Pass" />
+        <siteMapNode url="~/Transactions/CustomForms/GatePassReport.aspx" title="Gate Pass Report"  description="Gate Pass Report" />
+        <siteMapNode url="~/Transactions/CustomForms/ShiftingBreak.aspx" title="Shifting Break"  description="Shifting Break" />
+        <siteMapNode url="~/Transactions/CustomForms/ShiftingBreakReport.aspx" title="Shifting Break Report"  description="Shifting Break Report" />
+      </siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="~/Maintenance/Default.aspx" title="Maintenance"  description="Maintenance">
+			  <siteMapNode url="~/Maintenance/ApprovalRoute/Default.aspx" title="Approval Route"  description="Approval Route">
+				<siteMapNode url="~/Maintenance/ApprovalRoute/pgeApprovalRouteMaster.aspx" title="Approval Route Master"  description="Approval Route Master" />
+				<siteMapNode url="~/Maintenance/ApprovalRoute/pgeNewEmployeeApprovalRoute.aspx" title="Employee Approval Route"  description="Employee Approval Route" />
+				<siteMapNode url="~/Maintenance/ApprovalRoute/pgeApprovalRouteMasterReport.aspx" title="Approval Route Report"  description="Approval Route Report" />
+				<siteMapNode url="~/Maintenance/ApprovalRoute/pgeEmployeeApprovalRouteReport.aspx" title="Employee Approval Route Report"  description="Employee Approval Route Report" />
+				<siteMapNode url="~/Maintenance/ApprovalRoute/pgeApproverOverrideMaster.aspx" title="Approver Override Master"  description="Approver Override Master" />
+			</siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="~/Tools/Default.aspx" title="Tools"  description="Tools">
+			<siteMapNode url="~/Tools/Password/Default.aspx" title="Password"  description="Password">
+				<siteMapNode url="~/Tools/Password/pgeChangePassword.aspx" title="Change Password"  description="Change Password" />
+			</siteMapNode>
+			<siteMapNode url="~/Tools/Announcement/Default.aspx" title="Announcement"  description="Announcement">
+				<siteMapNode url="~/Tools/Announcement/pgeAnnouncementMaster.aspx" title="Announcement Master"  description="Announcement Master" />
+			</siteMapNode>
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

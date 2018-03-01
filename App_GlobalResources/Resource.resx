@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AFSHOWADDRESS" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show address movement transaction on home page</comment>
+  </data>
+  <data name="AFSHOWBENEFICIARY" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show beneficiary transactions on home page</comment>
+  </data>
+  <data name="AFSHOWFLEXTIME" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Show flextime transaction on home page</comment>
+  </data>
+  <data name="AFSHOWJOBSPLIT" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Show jobsplit transaction on home page</comment>
+  </data>
+  <data name="AFSHOWLEAVE" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show leave transactions on home page</comment>
+  </data>
+  <data name="AFSHOWOVERTIME" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show overtime transactions on home page</comment>
+  </data>
+  <data name="AFSHOWTAXCIVIL" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show tax / civil status transactions on home page</comment>
+  </data>
+  <data name="AFSHOWSTRAIGHTWORK" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Show straight work transaction on home page</comment>
+  </data>
+  <data name="AFSHOWTIMEMODIFICATION" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show time modification transactions on home page</comment>
+  </data>
+  <data name="AFSHOWWORKINFORMATION" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show work information transactions on home page</comment>
+  </data>
+  <data name="AFSHOWMANPOWER" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show man power for the employee approval route</comment>
+  </data>
+  <data name="AFSHOWTRAINING" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show Training module route</comment>
+  </data>
+  <data name="ALLOWFLOW" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Allow flow of transaction even on cut-off except approval (TRUE or FALSE)</comment>
+  </data>
+  <data name="ALLOWUNFROMLVFRACTION" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>True if allowing UN to skip from leave fraction checking</comment>
+  </data>
+  <data name="ALLOWUNFROMMINLVHR" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>True if allowing UN to be less than the minimum leave hour</comment>
+  </data>
+  <data name="BYPASSTIMEVERIFICATION" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>By-pass time moddification verification(TRUE or FALSE)</comment>
+  </data>
+  <data name="CHIYODASPECIFIC" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Set to true only if clietn is CHIYODA</comment>
+  </data>
+  <data name="CLINICSYSCNCK" xml:space="preserve">
+    <value>Data Source=192.168.135.139\SQL2008;Initial Catalog=CLINICDB;Persist Security Info=True;User ID=sa;Password=systemadmin</value>
+    <comment>Connection String of Clinic System</comment>
+  </data>
+  <data name="CLINICSYSFLAG" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Flag if Clinic System is Used for Leave Filling</comment>
+  </data>
+  <data name="CLINICSYSPDFURL" xml:space="preserve">
+    <value>http://122.52.142.93:70/pgePDFViewing.aspx</value>
+    <comment>Url of PDF Viewer of Clinic System</comment>
+  </data>
+  <data name="CLINICSYSUPLDLOC" xml:space="preserve">
+    <value>C:\SLUploads\</value>
+    <comment>Location of Medical Certificate Uploads</comment>
+  </data>
+  <data name="DEFAULTLOGINPASS" xml:space="preserve">
+    <value>eIA5/ijTaRI0PNPK821qLQ==</value>
+    <comment>Defualt Password Login</comment>
+  </data>
+  <data name="DEFAULTPAYSLIPPASS" xml:space="preserve">
+    <value>VXbhqd/+PnuKIYmHBzy0uA==</value>
+    <comment>Default Password Payslip</comment>
+  </data>
+  <data name="DEFAULTSHIFT" xml:space="preserve">
+    <value>N001</value>
+    <comment>Default shift of comapny( currently applicable to CHIYODA)</comment>
+  </data>
+  <data name="DENSOSPECIFIC" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Set to true only if client is DENSO</comment>
+  </data>
+  <data name="EMAILNOTIFICATION" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Notify Email (TRUE or FALSE)</comment>
+  </data>
+  <data name="ENABLEAPPROVALCOSTCENTER" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Enables costcenter selection on approval route master</comment>
+  </data>
+  <data name="LEAVECREDITSINHOURS" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Display credits in days or in hours. (TRUE or FLASE). Note for viewing only.</comment>
+  </data>
+  <data name="LEAVEREFRESH" xml:space="preserve">
+    <value>01/01</value>
+    <comment>Leave refresh date without year (mm/dd)</comment>
+  </data>
+  <data name="LEDGERCOLORCOMP" xml:space="preserve">
+    <value>#9728FF</value>
+    <comment>Ledger Company Holiday color</comment>
+  </data>
+  <data name="LEDGERCOLORHOL" xml:space="preserve">
+    <value>#FF8CD6</value>
+    <comment>Ledger Holiday color</comment>
+  </data>
+  <data name="LEDGERCOLOROTHERS" xml:space="preserve">
+    <value>#FF96F8</value>
+    <comment>Ledger  Others color</comment>
+  </data>
+  <data name="LEDGERCOLORREG" xml:space="preserve">
+    <value>#FFFFFF</value>
+    <comment>Ledger Regular Day color</comment>
+  </data>
+  <data name="LEDGERCOLORREST" xml:space="preserve">
+    <value>#2BC3FF</value>
+    <comment>Ledger Rest Day color</comment>
+  </data>
+  <data name="LEDGERCOLORSPL" xml:space="preserve">
+    <value>#FF8CD6</value>
+    <comment>Ledger Special Holiday color</comment>
+  </data>
+  <data name="LOADOTDEFAULTSTARTTIME" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Load default OTstart time from shift.</comment>
+  </data>
+  <data name="LOOKUPPAGEITEMS" xml:space="preserve">
+    <value>30</value>
+    <comment>Number of rows per page in all paging lookups</comment>
+  </data>
+  <data name="MAXFONT" xml:space="preserve">
+    <value>15</value>
+    <comment>Maximum font size (pt)</comment>
+  </data>
+  <data name="MENUBGCOLOR" xml:space="preserve">
+    <value>#9BC099</value>
+    <comment>Menu area background color</comment>
+  </data>
+  <data name="MINFONT" xml:space="preserve">
+    <value>8</value>
+    <comment>Minimum font size (pt)</comment>
+  </data>
+  <data name="NOINOUTINTIMMOD" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Disallows No In and Out in Time Mode Adjustment Lookup</comment>
+  </data>
+  <data name="REPORTSPAGEITEMS" xml:space="preserve">
+    <value>100</value>
+    <comment>Number of rows per page in all paging reports</comment>
+  </data>
+  <data name="RESETPASSWORD" xml:space="preserve">
+    <value>Test1234</value>
+    <comment>Reset password value</comment>
+  </data>
+  <data name="TMSSYSFLAG" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Is TMS used</comment>
+  </data>
+  <data name="TMSURL" xml:space="preserve">
+    <value> </value>
+    <comment>Tms Url</comment>
+  </data>
+  <data name="UNPAIDLVECODE" xml:space="preserve">
+    <value>PE</value>
+    <comment>Leave code for unpaid leave. Used in leave range for auto detection on unpaid</comment>
+  </data>
+  <data name="USEILLNESSONSL" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Use illness code for Sick Leave</comment>
+  </data>
+  <data name="USELEAVEDEFAULTSHIFT" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Update shift to default if employee is on leave (TRUE or FALSE)</comment>
+  </data>
+  <data name="USELOVERTIMEDEFAULTSHIFT" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Update shift to default if employee is on overtime(TRUE or FALSE)</comment>
+  </data>
+  <data name="USEPAYSLIPVERIFICATION" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Required Password on Payslip Viewing(TRUE or FALSE)</comment>
+  </data>
+  <data name="USEPROFILEUSERMASTER" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Use User Master in PROFILE database or not (from secific database). (TRUE or FALSE)</comment>
+  </data>
+  <data name="VIEWLOGREFERENCE" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Enable viewing of other log reference on Time Modification Entry</comment>
+  </data>
+  <data name="_3RDINFO" xml:space="preserve">
+    <value>Costcenter</value>
+    <comment>3RD Information Display(Nickname, Costcenter, Department)</comment>
+  </data>
+  <data name="REPORTSORTING" xml:space="preserve">
+    <value>DESC</value>
+    <comment>3RD Information Display(Nickname, Costcenter, Department)</comment>
+  </data>
+  <data name="ACTIVEDIRECTORY" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Activate Active Directory checking on login</comment>
+  </data>
+  <data name="ACTIVEDIRCN" xml:space="preserve">
+    <value>Data Source=localhost;Initial Catalog=ActiveDirectoryMapping;Persist Security Info=True;User ID=sa;Password=systemadmin</value>
+    <comment>Connection string for CLinic Database</comment>
+  </data>
+  <data name="LEARSPECIFIC" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Lear flag</comment>
+  </data>
+  <data name="TRAININGFLAG" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>Is Training flag</comment>
+  </data>
+  <data name="TRAININGURL" xml:space="preserve">
+    <value>http://localhost:61556/TRAINING/</value>
+    <comment>Training Url</comment>
+  </data>
+  <data name="BINDEMPLOYEELOOKUP" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Initially shows records in generic employee lookup. Advisable set to false if employee list is more than 1000</comment>
+  </data>
+  <data name="ALLOWAPPROVEDIRECT" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Dashboard allow approve directly</comment>
+  </data>
+  <data name="CENTRALDB" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Central database is activated</comment>
+  </data>
+  <data name="ALLOWFLEX" xml:space="preserve">
+    <value>FALSE</value>
+    <comment>allow all shifts to be added</comment>
+  </data>
+  <data name="AFSHOWGATEPASS" xml:space="preserve">
+    <value>TRUE</value>
+    <comment>Show gate pass transactions on home page</comment>
+  </data>
+</root>

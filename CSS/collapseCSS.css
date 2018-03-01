@@ -1,0 +1,68 @@
+﻿
+.dhtmlgoodies_question{	/* Styling question */
+	/* Start layout CSS */
+	color:#FFF;
+	font-size:11px;
+	background:#317082 url(../Images/updown_accordion.png);
+	width:430px;
+	margin-bottom:2px;
+	margin-top:2px;
+	margin-right:2px;
+	padding-left:2px;
+	
+	background-repeat:no-repeat;
+	background-position:top right;	
+	height:20px;
+	text-transform:uppercase;
+	
+	/* End layout CSS */
+	
+	overflow:hidden;
+	cursor:pointer;
+}
+.dhtmlgoodies_answer{	/* Parent box of slide down content */
+	/* Start layout CSS */
+	border:1px solid #317082;
+	background-color:#E2EBED;
+	width:400px;
+	
+	/* End layout CSS */
+	
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+
+}
+.dhtmlgoodies_answer_content{	/* Content that is slided down */
+	padding:1px;
+	font-size:0.9em;	
+	position:relative;
+}
+
+#lblError
+{
+	float:right;
+	position:absolute;	
+	z-index:2;
+	padding-left:3px;
+	padding-top:3px;
+}
+
+#ibtnError
+{
+	float:right;
+	position:absolute;	
+	z-index:1;
+	height: 22px;
+}
+
+#pnlError
+{
+	z-index:3; 
+}
+
+#dgvError
+{
+	z-index:3; 
+}

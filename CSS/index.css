@@ -1,0 +1,54 @@
+﻿body
+{
+	background-color:#CCEEEE;
+}
+
+.pageContent
+{
+	width:900px;
+    margin: 0 auto;
+    font-family:Arial;
+    font-size:12px;
+    background-color:#FFFFFF;
+    border:solid 5px #ffffff;
+}
+
+.logo
+{
+	width: 900px;
+	height: 70px;
+	background-color:#FFFFFF;
+	background-image: url(../Images/logo.png);
+	float:left;
+}
+.login
+{
+	font-family:Arial;
+    font-size:12px;
+}
+#servertime
+{
+	float:right;
+	font-size:medium;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+
+.cell0
+{
+    border-bottom: 1px solid;
+    border-color: #B9B9B9;
+}
+.cell1
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-color: #B9B9B9;
+}
+.cell2
+{
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-color: #B9B9B9;
+}

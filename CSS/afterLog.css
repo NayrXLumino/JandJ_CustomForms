@@ -1,0 +1,106 @@
+﻿body 
+{
+	font-family:Calibri;
+}
+
+.selectHand :hover
+{
+    cursor:hand;
+    border:solid 2px;
+    border-color:#000000;
+}
+
+.selectHand
+{
+	padding:0 auto;
+	margin:0 auto;
+    cursor:hand;
+    width:50px;
+    height:20px;
+    text-align:center;
+} 
+
+.transactionSelectHand:hover
+{
+	cursor:hand;
+	cursor: pointer;
+    border:solid 2px #000;
+    /*border-color:#000000;
+    position:absolute;*/
+}
+
+.transactionSelectHand
+{
+	font-size:14px;
+    cursor:hand;
+    width:100px;
+    height:18px;
+    border: solid 2px #fff;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.borderBR
+{
+	border-bottom:solid 2px #EEEEEE;
+	border-right:solid 2px #EEEEEE;
+}
+
+.borderTLBR
+{
+	border:solid 2px #EEEEEE;
+}
+
+.borderLBR
+{
+	border-bottom:solid 2px #EEEEEE;
+	border-right:solid 2px #EEEEEE;
+	border-left:solid 2px #EEEEEE;
+}
+
+.borderLB
+{
+	border-bottom:solid 2px #EEEEEE;
+	border-left:solid 2px #EEEEEE;
+}
+
+.borderTLR
+{
+	border-top:solid 2px #EEEEEE;
+	border-right:solid 2px #EEEEEE;
+	border-left:solid 2px #EEEEEE;
+}
+
+.borderTR
+{
+	border-top:solid 2px #EEEEEE;
+	border-right:solid 2px #EEEEEE;
+}
+
+.borderTL
+{
+	border-top:solid 2px #EEEEEE;
+	border-left:solid 2px #EEEEEE;
+}
+
+.borderTBR{
+	border-top:solid 2px #EEEEEE;
+	border-bottom:solid 2px #EEEEEE;
+	border-right:solid 2px #EEEEEE;
+}
+.borderTLB{
+	border-top:solid 2px #EEEEEE;
+	border-bottom:solid 2px #EEEEEE;
+	border-left:solid 2px #EEEEEE;
+}
+
+.borderB
+{
+	border-bottom:solid 2px #EEEEEE;
+	height:22px;
+}
+
+.myTransactionLegend
+{
+	color:#4A3DFF;
+}

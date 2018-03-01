@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WorklowV2Final">
+</Property><Property Name="Solution File" Value="D:\Projects\Workflow\WorkflowV2TFS\WORKFLOW\Workflow_v2\SourceCode\WorklowV2Final.sln">
+</Property><Property Name="Date" Value="Wednesday, April 04, 2012">
+</Property><Property Name="Time" Value="14:00 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WorklowV2Final.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WorklowV2Final.sln" Description="Converted">
+</Event></UpgradeLog>
